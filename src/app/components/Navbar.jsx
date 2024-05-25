@@ -38,9 +38,6 @@ const Navbar = () => {
                 Mahak Garg
             </Link>
             
-            <Link href={"/"} className='text-5xl text-white font-semibold'>
-                Mahak Garg
-            </Link>
         </div>
     </nav>
   );
