@@ -11,7 +11,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='col-span-7 place-self-center'>
+        <div className='col-span-7 place-self-center text-right'>
           <h1 className='text-white mb-4 text-4xl lg:text-6xl font-extrabold'>
             Hello, I am Mahak Garg
           </h1>
