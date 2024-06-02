@@ -22,7 +22,7 @@ git clone https://github.com/Mahak008/my-portfolio.git
 2. Navigate to the project directory:
 
 ```sh
-cd your-repo-name
+cd my-portfolio
 ```
 
 3. Install the dependencies:
