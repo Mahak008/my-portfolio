@@ -8,7 +8,6 @@ This is my personal portfolio website built with [Next.js](https://nextjs.org/) 
 - Smooth scrolling
 - Interactive project gallery
 - Contact form
-- SEO friendly
 
 ## Installation
 
@@ -17,7 +16,7 @@ To get a local copy up and running, follow these simple steps.
 1. Clone the repo:
 
 ```sh
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/Mahak008/my-portfolio.git
 ```
 
 2. Navigate to the project directory:
