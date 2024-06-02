@@ -18,19 +18,19 @@ To get a local copy up and running, follow these simple steps.
 
 ```sh
 git clone https://github.com/yourusername/your-repo-name.git
-  ```
+```
 
 2. Navigate to the project directory:
 
-    ```sh
-    cd your-repo-name
-    ```
+```sh
+cd your-repo-name
+```
 
 3. Install the dependencies:
 
-    ```sh
-    npm install
-    ```
+```sh
+npm install
+```
 
 ## Usage
 
@@ -38,6 +38,7 @@ To start the development server, run:
 
 ```sh
 npm run dev
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
