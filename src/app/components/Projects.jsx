@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 
@@ -62,6 +62,7 @@ const projectsData = [
 
 const Projects = () => {
   const [tag, setTag] = useState("All");
+  const ref = useRef(null);
 
   const handleTagChange = (newTag) => {
     setTag(newTag);
@@ -78,14 +79,30 @@ const Projects = () => {
       </h2>
 
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag onClick={handleTagChange} name="All" isSelected={tag === "All"} />
-        <ProjectTag onClick={handleTagChange} name="MERN" isSelected={tag === "MERN"} />
-        <ProjectTag onClick={handleTagChange} name="Java" isSelected={tag === "Java"} />
-        <ProjectTag onClick={handleTagChange} name="Python" isSelected={tag === "Python"} />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="All"
+          isSelected={tag === "All"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="MERN"
+          isSelected={tag === "MERN"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Java"
+          isSelected={tag === "Java"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Python"
+          isSelected={tag === "Python"}
+        />
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project) => (
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
             title={project.title}
@@ -95,7 +112,7 @@ const Projects = () => {
             previewUrl={project.previewUrl}
           />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };
