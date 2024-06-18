@@ -21,12 +21,22 @@ const TAB_DATA = [
   },
   {
     title: "Certifications",
-    id: "cert",
+    id: "certifications",
     content: (
       <ul className="list-disc pl-2">
         <li>Web Development Training by Internshala.</li>
         <li>Responsive Web Design Developer Certification by freeCodeCamp.</li>
         <li>HTML, CSS and Javascript for Web Developers by Coursera.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Achievements",
+    id: "achievements",
+    content: (
+      <ul className="list-disc pl-2">
+        <li>Ranked as the 3rd Top Contributor in Social Winter of Code 2.O</li>
+        <li>Recognized among the Top 60 teams in Hacksquad'22.</li>
       </ul>
     ),
   },
@@ -57,7 +67,7 @@ const About = () => {
             functionality in every project.
           </p>
 
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-center md:justify-start mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -65,19 +75,29 @@ const About = () => {
               {" "}
               Skills{" "}
             </TabButton>
+
             <TabButton
-              selectTab={() => handleTabChange("cert")}
-              active={tab === "cert"}
+              selectTab={() => handleTabChange("certifications")}
+              active={tab === "certifications"}
             >
               {" "}
               Certifications{" "}
             </TabButton>
+
+            <TabButton
+              selectTab={() => handleTabChange("achievements")}
+              active={tab === "achievements"}
+            >
+              {" "}
+              Achievements{" "}
+            </TabButton>
           </div>
 
-          <div className="mt-8">
+          <div className="my-5 text-justify">
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
+
         <Image
           src="/images/about-image.png"
           width={500}
