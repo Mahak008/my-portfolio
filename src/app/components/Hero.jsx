@@ -5,6 +5,16 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
+
+  const gradientStyle = {
+    background: "linear-gradient(to right, #D946EF, #8B5CF6)", // Example gradient colors
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    fontSize: "1em",
+    display: "inline-block"
+  };
+
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -22,14 +32,15 @@ const Hero = () => {
 
         <div className="col-span-7 place-self-center text-center sm:text-right justify-self-start">
           <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
-            <div className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+            <div>
               Hello, I am a
             </div>
+            
             <TypeAnimation
               sequence={["Web Developer", 1000, "Mern Stack Developer", 1000]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "1em", display: "inline-block" }}
+              style={gradientStyle}
               repeat={Infinity}
             />
           </h1>
