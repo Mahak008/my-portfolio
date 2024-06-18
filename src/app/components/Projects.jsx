@@ -43,7 +43,7 @@ const projectsData = [
   {
     id: 5,
     title: "Smart Calculator",
-    description: "Authentication and CRUD operations",
+    description: "Project 5 description",
     image: "/images/projects/P1.png",
     tag: ["All", "Python"],
     gitUrl: "/",
@@ -52,7 +52,7 @@ const projectsData = [
   {
     id: 6,
     title: "Project Management System",
-    description: "Project 5 description",
+    description: "Project 6 description",
     image: "/images/projects/ProjectManagement.png",
     tag: ["All", "MERN"],
     gitUrl: "/",
@@ -78,22 +78,25 @@ const Projects = () => {
         My Projects
       </h2>
 
-      <div className="text-white grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2 py-6">
+      <div className="text-white grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2 md:gap-12 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
           isSelected={tag === "All"}
         />
+
         <ProjectTag
           onClick={handleTagChange}
           name="MERN"
           isSelected={tag === "MERN"}
         />
+
         <ProjectTag
           onClick={handleTagChange}
           name="Java"
           isSelected={tag === "Java"}
         />
+
         <ProjectTag
           onClick={handleTagChange}
           name="Python"
