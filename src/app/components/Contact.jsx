@@ -9,12 +9,12 @@ const Contact = () => {
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
       id="contact"
     >
-      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] bg-purple-900 rounded-full h-80 w-80 z-0 blur-lg absolute top-48 -left-4 transform -translate-x-1/2 -translate-1/2 overflow-hidden"></div>
+      <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] bg-purple-900 rounded-full h-80 w-80 z-0 blur-lg absolute top-48 -left-4 transform -translate-x-1/2 -translate-1/2 overflow-hidden hidden md:block sm:block"></div>
       
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
+        <h5 className="text-2xl font-bold text-white my-2 text-center md:text-left">Let's Connect</h5>
         
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+        <p className="text-[#ADB7BE] mb-4 max-w-md text-justify">
           I'm currently looking for new opportunities, my inbox is always open.
           Whether you have a question or just want to say Hi, I'll try my best
           to get back to you.
