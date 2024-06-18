@@ -4,6 +4,41 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Contact = () => {
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = {
+      email: e.target.email.value,
+      subject: e.target.subject.value,
+      message: e.target.message.value,
+    }
+
+    const JSONdata = JSON.stringify(data);
+    const endpoint = "/api/send"; 
+    
+    // Form the request for sending data to the server
+    const options = {
+      // The method is POST because we are sending the data.
+      method: 'POST',
+
+      // Tell the server we're sending JSON
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      // Body of the request is the JSON data we created above
+      body: JSONdata,
+    }
+
+    const response = await fetch(endpoint, options);
+    const resData = await response.json();
+    console.log(resData);
+
+    if(response.status === 200) {
+      console.log('Message sent.');
+    }
+  };
+
   return (
     <section
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
@@ -30,7 +65,7 @@ const Contact = () => {
       </div>
 
       <div>
-        <form className="flex flex-col w-full">
+        <form className="flex flex-col w-full" onSubmit={handleSubmit}>
           <div className="mb-6 w-full">
             <label
               htmlFor="email"
