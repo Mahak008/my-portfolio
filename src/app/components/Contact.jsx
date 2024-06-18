@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Contact = () => {
-
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
@@ -32,10 +32,10 @@ const Contact = () => {
 
     const response = await fetch(endpoint, options);
     const resData = await response.json();
-    console.log(resData);
 
     if(response.status === 200) {
       console.log('Message sent.');
+      setEmailSubmitted(true);
     }
   };
 
@@ -124,6 +124,13 @@ const Contact = () => {
             >
               Send Message
             </button>
+
+            {
+              // If the email was submitted successfully
+              emailSubmitted && (
+                <p className="text-green-500 text-sm mt-2">Email Sent Successfully!</p>
+              )
+            }
           </div>
         </form>
       </div>
