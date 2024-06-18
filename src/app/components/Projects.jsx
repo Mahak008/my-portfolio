@@ -78,7 +78,7 @@ const Projects = () => {
         My Projects
       </h2>
 
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      <div className="text-white grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
