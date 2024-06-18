@@ -13,22 +13,22 @@ const navLinks = [
   },
   {
     title: "Projects",
-    path: "#pro",
+    path: "#projects",
   },
   {
     title: "Education",
-    path: "#edu",
+    path: "#education",
   },
   {
     title: "Contact",
-    path: "#con",
+    path: "#contact",
   },
 ];
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
       <div className="container flex flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
