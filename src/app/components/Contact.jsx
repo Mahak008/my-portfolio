@@ -4,41 +4,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Contact = () => {
-  const [emailSubmitted, setEmailSubmitted] = useState(false);
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const data = {
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
-    }
-
-    const JSONdata = JSON.stringify(data);
-    const endpoint = "/api/send"; 
-    
-    // Form the request for sending data to the server
-    const options = {
-      // The method is POST because we are sending the data.
-      method: 'POST',
-
-      // Tell the server we're sending JSON
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-      // Body of the request is the JSON data we created above
-      body: JSONdata,
-    }
-
-    const response = await fetch(endpoint, options);
-    const resData = await response.json();
-
-    if(response.status === 200) {
-      console.log('Message sent.');
-      setEmailSubmitted(true);
-    }
-  };
-
   return (
     <section
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
@@ -48,24 +13,23 @@ const Contact = () => {
       <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">Let's Connect</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          {" "}
           I'm currently looking for new opportunities, my inbox is always open.
           Whether you have a question or just want to say Hi, I'll try my best
           to get back to you.
         </p>
 
         <div className="socials flex flex-row gap-2">
-          <Link href="https://www.github.com/Mahak008" target="_blank">
+          <Link href="https://www.github.com/Mahak008" target="_blank" aria-label="GitHub">
             <FaGithub />
           </Link>
-          <Link href="https://www.linkedin.com/in/mahakgarg" target="_blank">
+          <Link href="https://www.linkedin.com/in/mahakgarg" target="_blank" aria-label="LinkedIn">
             <FaLinkedin />
           </Link>
         </div>
       </div>
 
       <div>
-        <form className="flex flex-col w-full" onSubmit={handleSubmit}>
+        <form className="flex flex-col w-full">
           <div className="mb-6 w-full">
             <label
               htmlFor="email"
@@ -73,7 +37,6 @@ const Contact = () => {
             >
               Email
             </label>
-
             <input
               name="email"
               type="email"
@@ -91,7 +54,6 @@ const Contact = () => {
             >
               Subject
             </label>
-
             <input
               name="subject"
               type="text"
@@ -125,12 +87,6 @@ const Contact = () => {
               Send Message
             </button>
 
-            {
-              // If the email was submitted successfully
-              emailSubmitted && (
-                <p className="text-green-500 text-sm mt-2">Email Sent Successfully!</p>
-              )
-            }
           </div>
         </form>
       </div>
