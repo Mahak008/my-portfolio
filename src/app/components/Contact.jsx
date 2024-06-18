@@ -14,10 +14,8 @@ const Contact = () => {
       <div className="z-10">
         <h5 className="text-2xl font-bold text-white my-2 text-center md:text-left">Let's Connect</h5>
         
-        <p className="text-[#ADB7BE] mb-4 max-w-md text-justify">
-          I'm currently looking for new opportunities, my inbox is always open.
-          Whether you have a question or just want to say Hi, I'll try my best
-          to get back to you.
+        <p className="text-[#b4bdc5] mb-4 max-w-md text-justify">
+          Feel free to reach out for collaborations, project discussions, or just to say hello! I'm currently exploring new opportunities and am eager to connect with like-minded individuals and teams. Whether it's a question about my work, an exciting new idea, or a potential collaboration, I look forward to hearing from you. Let's create something amazing together!
         </p>
       
       </div>
