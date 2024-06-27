@@ -5,6 +5,7 @@ import NavLink from "./NavLink";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import MenuOverlay from "./MenuOverlay";
+import { motion } from "framer-motion";
 
 const navLinks = [
   {
@@ -24,6 +25,8 @@ const navLinks = [
     path: "#contact",
   },
 ];
+
+const MotionLink = motion(Link);
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -57,12 +60,15 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
-        >
-          Mahak Garg
-        </Link>
+        <div className="flex items-center justify-center mt-2">
+          <MotionLink
+            href={"/"}
+            className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-bold"
+            whileHover={{ scale: 1.2 }}
+          >
+            MG
+          </MotionLink>
+        </div>
       </div>
 
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
