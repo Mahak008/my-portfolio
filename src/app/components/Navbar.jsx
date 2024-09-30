@@ -34,7 +34,7 @@ const MotionLink = motion(Link);
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-50 bg-black">
       <div className="container flex flex-wrap items-center justify-between mx-auto px-4 py-2 lg:py-4">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -68,7 +68,7 @@ const Navbar = () => {
           <MotionLink
             href={"/"}
             className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-bold"
-            whileHover={{
+            whileHover={{ 
               backgroundColor: [
                 "#121212",
                 "rgba(131, 58,180,1)",
@@ -77,19 +77,32 @@ const Navbar = () => {
                 "rgba(131,58,180,1)",
                 "#121212",
               ],
-              transition: { duration: 1, repeat: Infinity },
+              transition: { 
+                duration: 1, 
+                repeat: Infinity 
+              },
             }}
           >
             MG
           </MotionLink>
         </div>
 
-        <nav>
-        <Link href="" target="_blank"><MdEmail /></Link>
-        <Link href="https://www.github.com/Mahak008" target="_blank"><FaGithub /></Link>
-        <Link href="https://www.geeksforgeeks.org/user/mahak_garg/" target="_blank"><SiGeeksforgeeks /></Link>
-        <Link href="https://leetcode.com/u/Mahak80/" target="_blank"><SiLeetcode /></Link>
-          <Link href="https://www.linkedin.com/in/mahakgarg" target="_blank"><FaLinkedin /></Link>
+        <nav className="flex items-center justify-center flex-wrap">
+          <a href="mailto:garg02mahak@gmail.com" target="_blank">
+            <MdEmail />
+          </a>
+          <a href="https://www.github.com/Mahak008" target="_blank">
+            <FaGithub />
+          </a>
+          <a href="https://www.geeksforgeeks.org/user/mahak_garg/" target="_blank">
+            <SiGeeksforgeeks />
+          </a>
+          <a href="https://leetcode.com/u/Mahak80/" target="_blank">
+            <SiLeetcode />
+          </a>
+          <a href="https://www.linkedin.com/in/mahakgarg" target="_blank">
+            <FaLinkedin />
+          </a>
         </nav>
       </div>
 
