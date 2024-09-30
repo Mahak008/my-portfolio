@@ -68,7 +68,7 @@ const Navbar = () => {
           <MotionLink
             href={"/"}
             className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-bold"
-            whileHover={{ 
+            whileHover={{
               backgroundColor: [
                 "#121212",
                 "rgba(131, 58,180,1)",
@@ -77,9 +77,9 @@ const Navbar = () => {
                 "rgba(131,58,180,1)",
                 "#121212",
               ],
-              transition: { 
-                duration: 1, 
-                repeat: Infinity 
+              transition: {
+                duration: 1,
+                repeat: Infinity,
               },
             }}
           >
@@ -88,19 +88,39 @@ const Navbar = () => {
         </div>
 
         <nav className="flex items-center justify-center flex-wrap">
-          <a href="mailto:garg02mahak@gmail.com" target="_blank">
+          <a
+            href="mailto:garg02mahak@gmail.com"
+            target="_blank"
+            className="relative hover:bottom-1 w-6 mr-3"
+          >
             <MdEmail />
           </a>
-          <a href="https://www.github.com/Mahak008" target="_blank">
+          <a
+            href="https://www.github.com/Mahak008"
+            target="_blank"
+            className="relative hover:bottom-1 w-6 mr-3"
+          >
             <FaGithub />
           </a>
-          <a href="https://www.geeksforgeeks.org/user/mahak_garg/" target="_blank">
+          <a
+            href="https://www.geeksforgeeks.org/user/mahak_garg/"
+            target="_blank"
+            className="relative hover:bottom-1 w-6 mr-3"
+          >
             <SiGeeksforgeeks />
           </a>
-          <a href="https://leetcode.com/u/Mahak80/" target="_blank">
+          <a
+            href="https://leetcode.com/u/Mahak80/"
+            target="_blank"
+            className="relative hover:bottom-1 w-6 mr-3"
+          >
             <SiLeetcode />
           </a>
-          <a href="https://www.linkedin.com/in/mahakgarg" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/mahakgarg"
+            target="_blank"
+            className="relative hover:bottom-1 w-6 mr-3"
+          >
             <FaLinkedin />
           </a>
         </nav>
