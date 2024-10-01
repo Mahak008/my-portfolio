@@ -7,7 +7,7 @@ const projectsData = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "Project 1 description",
+    description: "Project description",
     image: "/images/projects/P1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,7 +16,7 @@ const projectsData = [
   {
     id: 2,
     title: "Hungry Box",
-    description: "Project 2 description",
+    description: "Project description",
     image: "/images/projects/HungryBox.png",
     tag: ["All", "MERN"],
     gitUrl: "/",
@@ -25,7 +25,7 @@ const projectsData = [
   {
     id: 3,
     title: "Complaint Management System",
-    description: "Project 3 description",
+    description: "Project description",
     image: "/images/projects/P1.png",
     tag: ["All", "Java"],
     gitUrl: "/",
@@ -34,7 +34,7 @@ const projectsData = [
   {
     id: 4,
     title: "Pharmacy Management System",
-    description: "Project 4 description",
+    description: "Project description",
     image: "/images/projects/P1.png",
     tag: ["All", "Python"],
     gitUrl: "/",
@@ -43,7 +43,7 @@ const projectsData = [
   {
     id: 5,
     title: "Smart Calculator",
-    description: "Project 5 description",
+    description: "Project description",
     image: "/images/projects/P1.png",
     tag: ["All", "Python"],
     gitUrl: "/",
@@ -52,7 +52,7 @@ const projectsData = [
   {
     id: 6,
     title: "Project Management System",
-    description: "Project 6 description",
+    description: "Project description",
     image: "/images/projects/ProjectManagement.png",
     tag: ["All", "MERN"],
     gitUrl: "/",
@@ -73,7 +73,7 @@ const Projects = () => {
   );
 
   return (
-    <section id="projects">
+    <section id="projects" style="margin: 1rem">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -104,7 +104,7 @@ const Projects = () => {
         />
       </div>
 
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12" style="margin : 2rem">
         {filteredProjects.map((project, index) => (
           <ProjectCard
             key={project.id}
@@ -116,7 +116,7 @@ const Projects = () => {
           />
         ))}
       </ul>
-    </section>
+    </section >
   );
 };
 

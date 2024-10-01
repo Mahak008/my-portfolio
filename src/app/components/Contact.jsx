@@ -2,22 +2,25 @@
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { Margarine } from "next/font/google";
+import { px } from "framer-motion";
 
 const Contact = () => {
   return (
     <section
       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
       id="contact"
+      style="margin: 2rem"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] bg-purple-900 rounded-full h-80 w-80 z-0 blur-lg absolute top-48 -left-4 transform -translate-x-1/2 -translate-1/2 overflow-hidden hidden md:block sm:block"></div>
-      
+
       <div className="z-10">
         <h5 className="text-2xl font-bold text-white my-2 text-center md:text-left">Let's Connect</h5>
-        
+
         <p className="text-[#b4bdc5] mb-4 max-w-md text-justify">
           Feel free to reach out for collaborations, project discussions, or just to say hello! I'm currently exploring new opportunities and am eager to connect with like-minded individuals and teams. Whether it's a question about my work, an exciting new idea, or a potential collaboration, I look forward to hearing from you. Let's create something amazing together!
         </p>
-      
+
       </div>
 
       <div>
