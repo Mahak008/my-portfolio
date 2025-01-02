@@ -1,9 +1,7 @@
 "use client";
-import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
-import { motion } from "framer-motion";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
@@ -29,8 +27,6 @@ const navLinks = [
   },
 ];
 
-const MotionLink = motion(Link);
-
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
@@ -38,7 +34,7 @@ const Navbar = () => {
       <div className="container flex flex-wrap items-center justify-between mx-auto px-4 py-2 md:py-8">
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
-            <button
+            <button 
               onClick={() => setNavbarOpen(true)}
               className="flex items-center px-3 py-2 text-slate-200 hover:text-white hover:border-white"
             >
@@ -64,62 +60,43 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex items-center justify-center mt-2 absolute left-[50%] top-2 translate-x-[-50%]">
-          <MotionLink
-            href={"/"}
-            className="w-16 h-16 bg-black text-white flex items-center justify-center rounded-full text-2xl font-bold"
-            whileHover={{
-              backgroundColor: [
-                "#121212",
-                "rgba(131, 58,180,1)",
-                "rgba(253,29,29,1)",
-                "rgba(252,176,69,1)",
-                "rgba(131,58,180,1)",
-                "#121212",
-              ],
-              transition: {
-                duration: 1,
-                repeat: Infinity,
-              },
-            }}
-          >
-            MG
-          </MotionLink>
+        <div className="text-center text-white text-xl flex-grow italianno-regular">
+          Mahak Garg
         </div>
 
         <nav className="flex items-center justify-center flex-wrap">
           <a
             href="mailto:garg02mahak@gmail.com"
             target="_blank"
-            className="relative hover:bottom-1 w-6 mr-3"
+            className="relative w-3 mr-2 md:w-6 md:mr-3"
           >
             <MdEmail />
           </a>
           <a
             href="https://www.github.com/Mahak008"
             target="_blank"
-            className="relative hover:bottom-1 w-6 mr-3"
+            className="relative w-3 mr-2 md:w-6 md:mr-3"
           >
             <FaGithub />
           </a>
           <a
             href="https://www.geeksforgeeks.org/user/mahak_garg/"
             target="_blank"
-            className="relative hover:bottom-1 w-6 mr-3"
+            className="relative w-3 mr-2 md:w-6 md:mr-3"
           >
             <SiGeeksforgeeks />
           </a>
           <a
             href="https://leetcode.com/u/Mahak80/"
             target="_blank"
-            className="relative hover:bottom-1 w-6 mr-3"
+            className="relative w-3 mr-2 md:w-6 md:mr-3"
           >
             <SiLeetcode />
           </a>
           <a
             href="https://www.linkedin.com/in/mahakgarg"
             target="_blank"
-            className="relative hover:bottom-1 w-6 mr-3"
+            className="relative w-3 mr-2 md:w-6 md:mr-3"
           >
             <FaLinkedin />
           </a>

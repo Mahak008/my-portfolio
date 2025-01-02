@@ -9,9 +9,9 @@ const projectsData = [
     title: "Portfolio Website",
     description: "Project 1 description",
     image: "/images/projects/P1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    tag: ["All", "Frontend"],
+    gitUrl: "https://github.com/Mahak008/my-portfolio",
+    previewUrl: "https://mahakgarg.vercel.app/",
   },
   {
     id: 2,
@@ -19,16 +19,16 @@ const projectsData = [
     description: "Project 2 description",
     image: "/images/projects/HungryBox.png",
     tag: ["All", "MERN"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Mahak008/HungryBox",
+    previewUrl: "https://hungrybox-frontend.onrender.com/",
   },
   {
     id: 3,
-    title: "Complaint Management System",
+    title: "Complaint Resolution System",
     description: "Project 3 description",
     image: "/images/projects/P1.png",
     tag: ["All", "Java"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Mahak008/IGDTUW-Complaint-Resolution-System",
     previewUrl: "/",
   },
   {
@@ -37,7 +37,7 @@ const projectsData = [
     description: "Project 4 description",
     image: "/images/projects/P1.png",
     tag: ["All", "Python"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Mahak008/Pharmacy-Management-System",
     previewUrl: "/",
   },
   {
@@ -46,7 +46,7 @@ const projectsData = [
     description: "Project 5 description",
     image: "/images/projects/P1.png",
     tag: ["All", "Python"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Mahak008/Smart-Calculator",
     previewUrl: "/",
   },
   {
@@ -55,7 +55,7 @@ const projectsData = [
     description: "Project 6 description",
     image: "/images/projects/ProjectManagement.png",
     tag: ["All", "MERN"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Mahak008/Project-Management-System",
     previewUrl: "/",
   },
 ];
@@ -78,7 +78,7 @@ const Projects = () => {
         My Projects
       </h2>
 
-      <div className="text-white grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2 md:gap-12 py-6">
+      <div className="text-white grid grid-cols-3 md:grid-cols-5 justify-center items-center gap-2 md:gap-12 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -89,6 +89,12 @@ const Projects = () => {
           onClick={handleTagChange}
           name="MERN"
           isSelected={tag === "MERN"}
+        />
+
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Frontend"
+          isSelected={tag === "Frontend"}
         />
 
         <ProjectTag

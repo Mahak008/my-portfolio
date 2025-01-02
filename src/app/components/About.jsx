@@ -24,6 +24,7 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
+        <li>Cybersecurity Foundations by Linkedin Learning</li>
         <li>Web Development Training by Internshala.</li>
         <li>Responsive Web Design Developer Certification by freeCodeCamp.</li>
         <li>HTML, CSS and Javascript for Web Developers by Coursera.</li>
@@ -35,8 +36,23 @@ const TAB_DATA = [
     id: "achievements",
     content: (
       <ul className="list-disc pl-2">
-        <li>Ranked as the 3rd Top Contributor in Social Winter of Code 2.O</li>
+        <li>
+          Qualified Smart India Hackathon 2023 Internal Round, showcasing
+          problem-solving skills and teamwork.
+        </li>
+        <li>
+          Ranked 3rd out of 1200+ participants in Script Winter of Code, 2022,
+          for maximum Open Source Contributions.
+        </li>
         <li>Recognized among the Top 60 teams in Hacksquad'22.</li>
+        <li>
+          Honored with the Most Reliable Student Award at Rock Gold Academy in
+          2018 for dedication to academics and extracurricular.
+        </li>
+        <li>
+          Secured 1st place out of 250+ teams at the District Level in NCSC,
+          2018, demonstrating strong critical thinking and collaborative skills.
+        </li>
       </ul>
     ),
   },
@@ -56,7 +72,9 @@ const About = () => {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full mb-2">
-          <h2 className="text-4xl font-bold text-white mb-4 text-center md:text-left">About Me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4 text-center md:text-left">
+            About Me
+          </h2>
 
           <p className="text-base lg:text-lg text-justify">
             As a passionate Frontend Developer, I excel in crafting intuitive

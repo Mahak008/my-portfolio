@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -30,4 +32,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.italianno-regular {
+  font-family: "Italianno", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3em;
+  margin: 0;
+  padding: 0;
 }
