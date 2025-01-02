@@ -35,24 +35,13 @@ const TAB_DATA = [
     title: "Achievements",
     id: "achievements",
     content: (
-      <ul className="list-disc pl-2">
-        <li>
-          Qualified Smart India Hackathon 2023 Internal Round, showcasing
-          problem-solving skills and teamwork.
-        </li>
-        <li>
-          Ranked 3rd out of 1200+ participants in Script Winter of Code, 2022,
-          for maximum Open Source Contributions.
-        </li>
-        <li>Recognized among the Top 60 teams in Hacksquad'22.</li>
-        <li>
-          Honored with the Most Reliable Student Award at Rock Gold Academy in
-          2018 for dedication to academics and extracurricular.
-        </li>
-        <li>
-          Secured 1st place out of 250+ teams at the District Level in NCSC,
-          2018, demonstrating strong critical thinking and collaborative skills.
-        </li>
+      <ul className="list-none pl-2">
+        <li>🏅 Winner of Smart India Hackathon, 2023 at IGDTUW. </li>
+        <li>🎓 Secured AIR - 356 in NIMCET'23. </li>
+        <li>🎖️ Ranked amongst the Top 60 teams in Hacksquad, 2022. </li>
+        <li>🥉 3rd Top Contributor in Social Winter of Code 2.0, 2021. </li>
+        <li>🎓 Honored with the Most Reliable Student Award, 2018. </li>
+        <li>🥇 Secured 1st place in NCSC, 2017 at the District Level.</li>
       </ul>
     ),
   },
